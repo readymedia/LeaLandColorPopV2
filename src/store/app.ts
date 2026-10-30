@@ -20,7 +20,11 @@ interface Settings {
   orientation: Orientation;
   difficulty: Difficulty;
   style: ArtStyle;
-  penOnly: boolean;
+  /** auto: fingeren tegner til en penn oppdages, deretter flytter den arket */
+  fingerMode: 'auto' | 'draw' | 'move';
+  penDetected: boolean;
+  quickShape: boolean;
+  gestureTipShown: boolean;
   nickname: string;
   customColors: string[];
 }
@@ -42,7 +46,10 @@ export const useApp = create<AppState>()(
       orientation: 'portrait',
       difficulty: 'medium',
       style: 'cartoon',
-      penOnly: false,
+      fingerMode: 'auto',
+      penDetected: false,
+      quickShape: true,
+      gestureTipShown: false,
       nickname: '',
       customColors: [],
       view: { name: 'home' },

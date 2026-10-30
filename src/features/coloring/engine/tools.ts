@@ -1,60 +1,85 @@
+export type Layer = 'line' | 'paint';
+
 export type ToolId =
+  | 'ink'
   | 'pencil'
   | 'crayon'
   | 'marker'
   | 'brush'
+  | 'airbrush'
   | 'spray'
   | 'glitter'
   | 'rainbow'
-  | 'bucket'
+  | 'smudge'
   | 'stamp'
+  | 'bucket'
   | 'eraser'
+  | 'eyedropper'
   | 'hand';
 
+export type StrokeTool = Exclude<ToolId, 'bucket' | 'eyedropper' | 'hand'>;
+
 export type PaintSource = { kind: 'solid'; color: string } | { kind: 'pattern'; id: string };
+
+export type Symmetry = 'off' | 'vertical' | 'horizontal' | 'quad' | 'kaleido';
 
 export interface ToolState {
   tool: ToolId;
   paint: PaintSource;
-  /** Indeks i SIZES */
+  /** Diameter i dokument-piksler */
   size: number;
+  /** 0.1–1 */
+  opacity: number;
   stamp: string;
+  layer: Layer;
+  symmetry: Symmetry;
+  /** Hold stille på slutten av en strek for å rette den opp til en form */
+  quickShape: boolean;
 }
 
-/** Penselstørrelser i dokument-piksler (dokumentet er ~2048 px på lengste side). */
-export const SIZES = [8, 16, 30, 56, 96];
+export type Render = 'freehand' | 'dab' | 'line' | 'scatter' | 'live';
 
 export interface ToolSpec {
-  /** Opasitet for hele strøket (ikke per segment → ingen mørke flekker der streken krysser seg selv). */
+  render: Render;
+  /** Opasitet for hele strøket når det «tørker» (ikke per dab) */
   alpha: number;
   composite: GlobalCompositeOperation;
-  sizeFactor: number;
-  pressure: boolean;
+  pressureSize: number; // hvor mye trykk påvirker størrelse (0–1)
+  pressureFlow: number; // hvor mye trykk påvirker opasitet (0–1)
+  tilt: boolean; // reagerer på pennevinkel
   usesPaint: boolean;
+  shapes: boolean; // kan bli «magisk form»
+  defaultSize: number;
 }
 
-export const TOOL_SPECS: Record<Exclude<ToolId, 'hand' | 'bucket'>, ToolSpec> = {
-  pencil: { alpha: 1, composite: 'source-over', sizeFactor: 0.45, pressure: true, usesPaint: true },
-  crayon: { alpha: 0.95, composite: 'source-over', sizeFactor: 1, pressure: true, usesPaint: true },
-  marker: { alpha: 0.55, composite: 'multiply', sizeFactor: 1.1, pressure: false, usesPaint: true },
-  brush: { alpha: 0.85, composite: 'source-over', sizeFactor: 1.2, pressure: true, usesPaint: true },
-  spray: { alpha: 1, composite: 'source-over', sizeFactor: 1.6, pressure: false, usesPaint: true },
-  glitter: { alpha: 1, composite: 'source-over', sizeFactor: 1.4, pressure: false, usesPaint: true },
-  rainbow: { alpha: 0.9, composite: 'source-over', sizeFactor: 1, pressure: true, usesPaint: false },
-  stamp: { alpha: 1, composite: 'source-over', sizeFactor: 2.6, pressure: false, usesPaint: false },
-  eraser: { alpha: 1, composite: 'destination-out', sizeFactor: 1.3, pressure: false, usesPaint: false },
+export const TOOL_SPECS: Record<StrokeTool, ToolSpec> = {
+  ink: { render: 'freehand', alpha: 1, composite: 'source-over', pressureSize: 0.65, pressureFlow: 0, tilt: false, usesPaint: true, shapes: true, defaultSize: 12 },
+  pencil: { render: 'dab', alpha: 1, composite: 'source-over', pressureSize: 0.4, pressureFlow: 0.7, tilt: true, usesPaint: true, shapes: true, defaultSize: 7 },
+  crayon: { render: 'line', alpha: 0.95, composite: 'source-over', pressureSize: 0.5, pressureFlow: 0, tilt: true, usesPaint: true, shapes: true, defaultSize: 26 },
+  marker: { render: 'freehand', alpha: 0.6, composite: 'multiply', pressureSize: 0, pressureFlow: 0, tilt: false, usesPaint: true, shapes: true, defaultSize: 30 },
+  brush: { render: 'dab', alpha: 0.9, composite: 'source-over', pressureSize: 0.75, pressureFlow: 0.3, tilt: true, usesPaint: true, shapes: false, defaultSize: 40 },
+  airbrush: { render: 'dab', alpha: 1, composite: 'source-over', pressureSize: 0.2, pressureFlow: 0.9, tilt: false, usesPaint: true, shapes: false, defaultSize: 90 },
+  spray: { render: 'scatter', alpha: 1, composite: 'source-over', pressureSize: 0, pressureFlow: 0.5, tilt: false, usesPaint: true, shapes: false, defaultSize: 60 },
+  glitter: { render: 'scatter', alpha: 1, composite: 'source-over', pressureSize: 0, pressureFlow: 0, tilt: false, usesPaint: true, shapes: false, defaultSize: 50 },
+  rainbow: { render: 'line', alpha: 0.95, composite: 'source-over', pressureSize: 0.6, pressureFlow: 0, tilt: false, usesPaint: false, shapes: true, defaultSize: 30 },
+  smudge: { render: 'live', alpha: 1, composite: 'source-over', pressureSize: 0.3, pressureFlow: 0.6, tilt: false, usesPaint: false, shapes: false, defaultSize: 44 },
+  stamp: { render: 'scatter', alpha: 1, composite: 'source-over', pressureSize: 0, pressureFlow: 0, tilt: false, usesPaint: false, shapes: false, defaultSize: 90 },
+  eraser: { render: 'live', alpha: 1, composite: 'destination-out', pressureSize: 0.4, pressureFlow: 0, tilt: false, usesPaint: false, shapes: true, defaultSize: 40 },
 };
 
-export const STAMPS = ['⭐', '❤️', '🌸', '🦋', '🌈', '☀️', '🌙', '✨', '🍄', '🐞', '🐟', '🐾', '🎈', '👑', '💎', '🍓', '🌻', '🍭', '🎀', '🚀', '🦄', '🐱', '🐶', '🍀'];
+export const MIN_SIZE = 2;
+export const MAX_SIZE = 200;
+
+/** Glidebryter 0–100 ↔ størrelse (logaritmisk, så små størrelser er lette å treffe). */
+export const sliderToSize = (v: number) => Math.round(MIN_SIZE * Math.pow(MAX_SIZE / MIN_SIZE, v / 100));
+export const sizeToSlider = (s: number) => Math.round((Math.log(s / MIN_SIZE) / Math.log(MAX_SIZE / MIN_SIZE)) * 100);
+
+export const STAMPS = ['⭐', '❤️', '🌸', '🦋', '🌈', '☀️', '🌙', '✨', '🍄', '🐞', '🐟', '🐾', '🎈', '👑', '💎', '🍓', '🌻', '🍭', '🎀', '🚀', '🦄', '🐱', '🐶', '🍀', '🌵', '🍕', '⚽', '🎵', '☁️', '❄️'];
 
 export const PALETTE = [
-  // Varme
   '#E53935', '#FF6F61', '#FF8A3D', '#FFB31A', '#FFE14D', '#FFF59D',
-  // Grønne/blå
   '#2E7D32', '#5BD46A', '#B2F2BB', '#14B8A6', '#2F9BEF', '#90CAF9',
-  // Lilla/rosa
   '#3949AB', '#6B4EFF', '#B39DFF', '#C2185B', '#F2559A', '#FFC1DA',
-  // Jord/hud/nøytral
   '#5D4037', '#8D6E63', '#D7A36F', '#F3D2B3', '#FCE8D8', '#FFFFFF',
-  '#212121', '#616161', '#9E9E9E', '#E0E0E0',
+  '#1D1B2E', '#616161', '#9E9E9E', '#E0E0E0',
 ];

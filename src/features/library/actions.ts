@@ -75,6 +75,20 @@ export async function createFromUpload(file: File, convert: (f: Blob) => Promise
   useApp.getState().go({ name: 'preview', id: pic.id });
 }
 
+/** «Tegn selv»: tomt ark i valgt format, åpnes rett i verkstedet på strek-laget. */
+export async function createBlank(orientation: 'portrait' | 'landscape' | 'square', title: string) {
+  const [w, h] = orientation === 'portrait' ? [1536, 2048] : orientation === 'landscape' ? [2048, 1536] : [2048, 2048];
+  const c = document.createElement('canvas');
+  c.width = w;
+  c.height = h;
+  const ctx = c.getContext('2d')!;
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(0, 0, w, h);
+  const blob = await new Promise<Blob>((r) => c.toBlob((b) => r(b!), 'image/png'));
+  const pic = await storeImage(blob, title, 'draw');
+  useApp.getState().go({ name: 'color', id: pic.id });
+}
+
 export async function createFromWall(url: string, prompt: string, wallTemplateId: string) {
   const res = await fetch(url);
   const blob = await res.blob();

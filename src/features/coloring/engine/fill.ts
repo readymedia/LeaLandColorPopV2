@@ -211,3 +211,19 @@ export class FillMap {
     return g;
   }
 }
+
+/**
+ * Fyll-kart fra strek-lagets alfakanal. Brukes både for AI-tegninger (konvertert til
+ * gjennomsiktig strek-lag) og for streker barnet tegner selv – uansett farge.
+ */
+export function buildLineMaskFromAlpha(rgba: Uint8ClampedArray, width: number, height: number, wallAlpha = 110, softAlpha = 14): LineMask {
+  const n = width * height;
+  const wall = new Uint8Array(n);
+  const soft = new Uint8Array(n);
+  for (let i = 0, p = 3; i < n; i++, p += 4) {
+    const a = rgba[p];
+    if (a > wallAlpha) wall[i] = 1;
+    if (a > softAlpha) soft[i] = 1;
+  }
+  return { width, height, wall, soft };
+}

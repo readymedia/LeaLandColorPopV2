@@ -94,3 +94,13 @@ describe('dilate', () => {
     expect(out.reduce((a, b) => a + b, 0)).toBe(9);
   });
 });
+
+import { buildLineMaskFromAlpha } from './fill';
+describe('buildLineMaskFromAlpha', () => {
+  it('farget strek er også en kant', () => {
+    const d = new Uint8ClampedArray([255, 230, 0, 255, 0, 0, 0, 0, 255, 0, 0, 60]);
+    const m = buildLineMaskFromAlpha(d, 3, 1);
+    expect([...m.wall]).toEqual([1, 0, 0]);
+    expect([...m.soft]).toEqual([1, 0, 1]);
+  });
+});

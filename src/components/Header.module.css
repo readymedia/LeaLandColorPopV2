@@ -37,6 +37,7 @@
 
 .tab {
   all: unset;
+  white-space: nowrap;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -102,8 +103,12 @@
   }
 }
 
-@media (max-width: 420px) {
-  .tab span {
-    font-size: 0.9rem;
+@media (max-width: 460px) {
+  .tab {
+    padding: 0 10px;
+    font-size: 0.95rem;
+  }
+  .tab svg {
+    display: none;
   }
 }

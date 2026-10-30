@@ -1,0 +1,56 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.track {
+  position: relative;
+  width: 14px;
+  height: clamp(110px, 22dvh, 190px);
+  border-radius: 999px;
+  background: var(--ds-color-neutral-surface-tinted);
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.06);
+  cursor: pointer;
+  touch-action: none;
+  /* Større trykkflate enn sporet */
+  outline-offset: 6px;
+}
+
+.track::before {
+  content: '';
+  position: absolute;
+  inset: -6px -16px;
+}
+
+.track:focus-visible {
+  outline: 3px solid var(--ll-violet);
+}
+
+.fill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 999px;
+  background: var(--ll-violet);
+}
+
+.thumb {
+  position: absolute;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  border-radius: 999px;
+  background: #fff;
+  border: 3px solid var(--ll-violet);
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.2);
+}
+
+.label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--ll-ink);
+}

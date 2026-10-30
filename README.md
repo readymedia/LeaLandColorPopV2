@@ -30,7 +30,25 @@ men alle funksjonene er med, og flere er kommet til.
 - Kunstveggen modereres: delte bilder vises først når en voksen har godkjent dem i `/admin`. Bilder deles ikke lenger automatisk ved generering.
 - `node_modules` og `dist` er ikke lenger sjekket inn.
 
-**Fargelegging** (ny motor: `src/features/coloring/engine/`)
+**Tre innganger: Lag med magi, Tegn selv, Last opp**
+- «Tegn selv» åpner et tomt ark på strek-laget. Verkstedet har to lag: **Strek** og **Farge**. Alt som tegnes på strek-laget blir kanter for malingsbøtta, i hvilken som helst farge. Barnet kan altså tegne sitt eget omriss og fargelegge det, eller legge til streker i en AI-tegning.
+- Tegningen lagres som strektegning, så den kan også brukes på lysbord, projektor og utskrift.
+
+**Penn og berøring (Windows Ink / Surface, iPad + Apple Pencil, Android-penner)**
+- Trykkfølsomhet på alle penselverktøy. Vinkel (tilt/azimut): en skrå blyant skyggelegger bredt og lyst, og penselen følger pennevinkelen.
+- Skiller mellom penn, finger og mus. Når en penn oppdages, tegner pennen og fingeren flytter og zoomer arket (håndflate-beskyttelse). Kan overstyres i innstillingene.
+- Viskelærenden på Surface-pennen visker automatisk. Sideknappen henter farge (pipette).
+- Penselmarkøren vises når pennen svever over skjermen. Coalesced events gir jevne streker.
+- To-finger-trykk angrer, tre-finger-trykk gjør om. Knip for zoom, og dra med to fingre for å flytte.
+
+**Tegneverktøy**
+- Tusjpenn (glatt, trykkfølsom strek med stabilisering), blyant, fargestift, tusj, pensel, airbrush, spray, glitter, regnbue, gni (blander farger), stempler, bøtte og viskelær.
+- **Magiske former:** hold pennen stille på slutten av en strek, så blir den en rett linje, sirkel, oval, trekant, firkant eller mangekant.
+- **Speiltegning:** sideveis, opp/ned, fire hjørner eller kaleidoskop.
+- Loddrette glidebrytere for størrelse og styrke (som i Procreate), med forhåndsvisning. Hvert verktøy husker sin egen størrelse.
+- Tastatur: Ctrl/Cmd+Z og Y, `[` og `]` for størrelse, og bokstav-snarveier for verktøy.
+
+**Fargelegging** (motor: `src/features/coloring/engine/`)
 - Strekene ligger i et eget lag øverst, så farge kan aldri dekke dem.
 - Malingsbøtta bruker scanline-fyll (mye raskere), lukker små hull i strekene så fargen ikke lekker, og gir ikke hvite kanter.
 - Bøtta fyller etter strekene, ikke etter det som allerede er malt, så man kan male om et område med ett trykk.

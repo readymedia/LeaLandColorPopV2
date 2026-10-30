@@ -22,7 +22,7 @@ export function PreviewView({ id }: { id: string }) {
   if (pic === null) return null;
 
   const actions = [
-    { key: 'color', icon: Palette, title: t('preview.color'), desc: t('preview.color.desc'), tint: 'pink', onClick: () => go({ name: 'color', id }) },
+    { key: 'color', icon: Palette, title: t('preview.color.draw'), desc: t('preview.color.desc'), tint: 'pink', onClick: () => go({ name: 'color', id }) },
     { key: 'light', icon: Tablet, title: t('preview.lighttable'), desc: t('preview.lighttable.desc'), tint: 'sky', onClick: () => go({ name: 'lighttable', id }) },
     { key: 'proj', icon: Projector, title: t('preview.projector'), desc: t('preview.projector.desc'), tint: 'violet', onClick: () => go({ name: 'projector', id }) },
     { key: 'print', icon: Printer, title: t('preview.print'), desc: t('preview.print.desc'), tint: 'sun', onClick: () => url && printImage(url) },

@@ -11,13 +11,15 @@ export interface Picture {
   createdAt: number;
   updatedAt: number;
   lineArt: Blob;
+  /** Strek-laget med gjennomsiktighet (når barnet har tegnet streker selv). */
+  lineLayer?: Blob;
   /** Fargelaget (PNG med gjennomsiktighet), hvis barnet har begynt å fargelegge. */
   paint?: Blob;
   /** Liten forhåndsvisning (dataURL) for listevisning. */
   thumb?: string;
   /** Hvis malen er delt/hentet fra Kunstveggen. */
   wallTemplateId?: string;
-  source: 'ai' | 'upload' | 'wall';
+  source: 'ai' | 'upload' | 'wall' | 'draw';
 }
 
 const store = typeof indexedDB !== 'undefined' ? createStore('lealand-v2', 'pictures') : undefined;

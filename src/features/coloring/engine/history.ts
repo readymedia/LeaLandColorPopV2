@@ -3,6 +3,7 @@
  * v1 lagret hele lerretet som base64-PNG 20 ganger (treg, minnetung, flimret).
  */
 export interface Patch {
+  layer: 'line' | 'paint';
   x: number;
   y: number;
   before: ImageData;
