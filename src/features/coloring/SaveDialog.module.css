@@ -1,0 +1,40 @@
+.dialog {
+  max-width: min(680px, 96vw);
+  width: 100%;
+  border-radius: 28px;
+}
+
+.h {
+  font-family: var(--ll-font-display);
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.card {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  padding: 18px;
+  border-radius: 22px;
+  background: var(--ds-color-neutral-background-tinted);
+}
+
+.info {
+  margin: 0;
+  color: var(--ds-color-neutral-text-subtle);
+}
+
+.alert {
+  margin-top: 14px;
+}
+
+@media (max-width: 560px) {
+  .options {
+    grid-template-columns: 1fr;
+  }
+}

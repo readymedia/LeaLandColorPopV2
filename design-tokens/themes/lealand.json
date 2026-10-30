@@ -1,0 +1,732 @@
+{
+  "color": {
+    "accent": {
+      "1": {
+        "$type": "color",
+        "$value": "{lealand.accent.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{lealand.accent.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{lealand.accent.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{lealand.accent.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{lealand.accent.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{lealand.accent.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{lealand.accent.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{lealand.accent.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{lealand.accent.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{lealand.accent.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{lealand.accent.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{lealand.accent.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{lealand.accent.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{lealand.accent.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{lealand.accent.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{lealand.accent.16}"
+      }
+    },
+    "pink": {
+      "1": {
+        "$type": "color",
+        "$value": "{lealand.pink.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{lealand.pink.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{lealand.pink.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{lealand.pink.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{lealand.pink.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{lealand.pink.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{lealand.pink.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{lealand.pink.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{lealand.pink.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{lealand.pink.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{lealand.pink.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{lealand.pink.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{lealand.pink.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{lealand.pink.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{lealand.pink.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{lealand.pink.16}"
+      }
+    },
+    "sun": {
+      "1": {
+        "$type": "color",
+        "$value": "{lealand.sun.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{lealand.sun.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{lealand.sun.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{lealand.sun.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{lealand.sun.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{lealand.sun.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{lealand.sun.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{lealand.sun.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{lealand.sun.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{lealand.sun.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{lealand.sun.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{lealand.sun.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{lealand.sun.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{lealand.sun.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{lealand.sun.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{lealand.sun.16}"
+      }
+    },
+    "mint": {
+      "1": {
+        "$type": "color",
+        "$value": "{lealand.mint.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{lealand.mint.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{lealand.mint.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{lealand.mint.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{lealand.mint.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{lealand.mint.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{lealand.mint.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{lealand.mint.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{lealand.mint.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{lealand.mint.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{lealand.mint.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{lealand.mint.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{lealand.mint.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{lealand.mint.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{lealand.mint.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{lealand.mint.16}"
+      }
+    },
+    "sky": {
+      "1": {
+        "$type": "color",
+        "$value": "{lealand.sky.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{lealand.sky.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{lealand.sky.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{lealand.sky.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{lealand.sky.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{lealand.sky.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{lealand.sky.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{lealand.sky.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{lealand.sky.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{lealand.sky.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{lealand.sky.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{lealand.sky.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{lealand.sky.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{lealand.sky.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{lealand.sky.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{lealand.sky.16}"
+      }
+    },
+    "neutral": {
+      "1": {
+        "$type": "color",
+        "$value": "{lealand.neutral.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{lealand.neutral.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{lealand.neutral.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{lealand.neutral.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{lealand.neutral.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{lealand.neutral.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{lealand.neutral.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{lealand.neutral.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{lealand.neutral.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{lealand.neutral.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{lealand.neutral.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{lealand.neutral.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{lealand.neutral.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{lealand.neutral.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{lealand.neutral.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{lealand.neutral.16}"
+      }
+    },
+    "info": {
+      "1": {
+        "$type": "color",
+        "$value": "{lealand.info.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{lealand.info.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{lealand.info.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{lealand.info.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{lealand.info.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{lealand.info.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{lealand.info.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{lealand.info.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{lealand.info.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{lealand.info.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{lealand.info.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{lealand.info.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{lealand.info.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{lealand.info.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{lealand.info.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{lealand.info.16}"
+      }
+    },
+    "success": {
+      "1": {
+        "$type": "color",
+        "$value": "{lealand.success.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{lealand.success.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{lealand.success.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{lealand.success.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{lealand.success.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{lealand.success.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{lealand.success.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{lealand.success.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{lealand.success.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{lealand.success.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{lealand.success.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{lealand.success.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{lealand.success.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{lealand.success.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{lealand.success.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{lealand.success.16}"
+      }
+    },
+    "warning": {
+      "1": {
+        "$type": "color",
+        "$value": "{lealand.warning.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{lealand.warning.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{lealand.warning.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{lealand.warning.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{lealand.warning.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{lealand.warning.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{lealand.warning.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{lealand.warning.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{lealand.warning.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{lealand.warning.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{lealand.warning.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{lealand.warning.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{lealand.warning.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{lealand.warning.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{lealand.warning.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{lealand.warning.16}"
+      }
+    },
+    "danger": {
+      "1": {
+        "$type": "color",
+        "$value": "{lealand.danger.1}"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{lealand.danger.2}"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{lealand.danger.3}"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "{lealand.danger.4}"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "{lealand.danger.5}"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "{lealand.danger.6}"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "{lealand.danger.7}"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "{lealand.danger.8}"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "{lealand.danger.9}"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "{lealand.danger.10}"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "{lealand.danger.11}"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "{lealand.danger.12}"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "{lealand.danger.13}"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "{lealand.danger.14}"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "{lealand.danger.15}"
+      },
+      "16": {
+        "$type": "color",
+        "$value": "{lealand.danger.16}"
+      }
+    },
+    "link": {
+      "visited": {
+        "$type": "color",
+        "$value": "{lealand.link.visited}"
+      }
+    },
+    "focus": {
+      "inner-color": {
+        "$type": "color",
+        "$value": "{lealand.focus.inner}"
+      },
+      "outer-color": {
+        "$type": "color",
+        "$value": "{lealand.focus.outer}"
+      }
+    }
+  },
+  "font-family": {
+    "$type": "fontFamilies",
+    "$value": "{lealand.font-family}"
+  },
+  "font-weight": {
+    "medium": {
+      "$type": "fontWeights",
+      "$value": "{lealand.font-weight.medium}"
+    },
+    "semibold": {
+      "$type": "fontWeights",
+      "$value": "{lealand.font-weight.semibold}"
+    },
+    "regular": {
+      "$type": "fontWeights",
+      "$value": "{lealand.font-weight.regular}"
+    }
+  },
+  "border-radius": {
+    "1": {
+      "$type": "dimension",
+      "$value": "min({border-radius.base}*0.5,{border-radius.scale})"
+    },
+    "2": {
+      "$type": "dimension",
+      "$value": "min({border-radius.base},{border-radius.scale}*2)"
+    },
+    "3": {
+      "$type": "dimension",
+      "$value": "min({border-radius.base}*2,{border-radius.scale}*5)"
+    },
+    "4": {
+      "$type": "dimension",
+      "$value": "min({border-radius.base}*3,{border-radius.scale}*7)"
+    },
+    "5": {
+      "$type": "dimension",
+      "$value": "{border-radius.base}"
+    },
+    "6": {
+      "$type": "dimension",
+      "$value": "9999"
+    },
+    "base": {
+      "$type": "dimension",
+      "$value": "16"
+    },
+    "scale": {
+      "$type": "dimension",
+      "$value": "4"
+    }
+  }
+}

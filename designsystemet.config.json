@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/@digdir/designsystemet/dist/config.schema.json",
+  "outDir": "./design-tokens",
+  "clean": true,
+  "themes": {
+    "lealand": {
+      "colors": {
+        "accent": "#6B4EFF",
+        "pink": "#F2559A",
+        "sun": "#FFB31A",
+        "mint": "#14B8A6",
+        "sky": "#2F9BEF",
+        "neutral": "#2A2840"
+      },
+      "typography": { "fontFamily": "Nunito Variable" },
+      "borderRadius": 16
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "background-default": {
+    "$type": "color",
+    "$value": "{color.sky.background-default}"
+  },
+  "background-tinted": {
+    "$type": "color",
+    "$value": "{color.sky.background-tinted}"
+  },
+  "surface-default": {
+    "$type": "color",
+    "$value": "{color.sky.surface-default}"
+  },
+  "surface-tinted": {
+    "$type": "color",
+    "$value": "{color.sky.surface-tinted}"
+  },
+  "surface-hover": {
+    "$type": "color",
+    "$value": "{color.sky.surface-hover}"
+  },
+  "surface-active": {
+    "$type": "color",
+    "$value": "{color.sky.surface-active}"
+  },
+  "border-subtle": {
+    "$type": "color",
+    "$value": "{color.sky.border-subtle}"
+  },
+  "border-default": {
+    "$type": "color",
+    "$value": "{color.sky.border-default}"
+  },
+  "border-strong": {
+    "$type": "color",
+    "$value": "{color.sky.border-strong}"
+  },
+  "text-subtle": {
+    "$type": "color",
+    "$value": "{color.sky.text-subtle}"
+  },
+  "text-default": {
+    "$type": "color",
+    "$value": "{color.sky.text-default}"
+  },
+  "base-default": {
+    "$type": "color",
+    "$value": "{color.sky.base-default}"
+  },
+  "base-hover": {
+    "$type": "color",
+    "$value": "{color.sky.base-hover}"
+  },
+  "base-active": {
+    "$type": "color",
+    "$value": "{color.sky.base-active}"
+  },
+  "base-contrast-subtle": {
+    "$type": "color",
+    "$value": "{color.sky.base-contrast-subtle}"
+  },
+  "base-contrast-default": {
+    "$type": "color",
+    "$value": "{color.sky.base-contrast-default}"
+  }
+}

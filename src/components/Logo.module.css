@@ -1,0 +1,39 @@
+.logo {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3em;
+  font-family: var(--ll-font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.lea {
+  color: var(--ll-ink);
+}
+
+.pop span {
+  display: inline-block;
+}
+
+.pop span:nth-child(odd) {
+  transform: translateY(-0.06em) rotate(-4deg);
+}
+
+.pop span:nth-child(even) {
+  transform: translateY(0.04em) rotate(3deg);
+}
+
+.large {
+  font-size: clamp(2.6rem, 8vw, 4.5rem);
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+@media (max-width: 420px) {
+  .logo:not(.large) .lea {
+    display: none;
+  }
+}

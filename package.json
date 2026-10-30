@@ -1,0 +1,46 @@
+{
+  "name": "lealand-colorpop",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "theme": "designsystemet tokens create --clean && designsystemet tokens build --clean -o src/styles/theme"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@digdir/designsystemet-css": "^1.23.0",
+    "@digdir/designsystemet-react": "^1.23.0",
+    "@fontsource-variable/baloo-2": "^5.3.0",
+    "@fontsource-variable/nunito": "^5.3.0",
+    "@google/genai": "^2.32.0",
+    "@upstash/ratelimit": "^2.2.0",
+    "@upstash/redis": "^1.40.0",
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/blob": "^2.8.2",
+    "idb-keyval": "^6.3.0",
+    "lucide-react": "^1.65.0",
+    "next": "^16.4.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "server-only": "^0.0.1",
+    "zod": "^4.6.7",
+    "zustand": "^5.0.16"
+  },
+  "devDependencies": {
+    "@digdir/designsystemet": "^1.23.0",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "jsdom": "^30.1.3",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}

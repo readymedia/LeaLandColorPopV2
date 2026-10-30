@@ -1,0 +1,111 @@
+.dialog {
+  max-width: min(720px, 96vw);
+  width: 100%;
+  border-radius: 28px;
+}
+
+.h {
+  font-family: var(--ll-font-display);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.potWrap {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+}
+
+.pot {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 46% 54% 50% 50% / 52% 48% 52% 48%;
+  box-shadow: inset 0 -14px 0 rgb(0 0 0 / 0.08), 0 0 0 6px #fff, 0 0 0 8px var(--ds-color-neutral-border-subtle);
+  transition: background-color 0.35s ease;
+}
+
+.shine {
+  position: absolute;
+  top: 24px;
+  left: 34px;
+  width: 44px;
+  height: 20px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.5);
+  transform: rotate(-30deg);
+}
+
+.result {
+  margin: 0;
+  font-size: 1.2rem;
+  text-align: center;
+  min-height: 1.5em;
+}
+
+.tubes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.tube {
+  display: grid;
+  grid-template-columns: 28px 70px 1fr auto auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.blob {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.15);
+}
+
+.tubeLabel {
+  font-weight: 700;
+}
+
+.drops {
+  display: flex;
+  gap: 3px;
+}
+
+.drop {
+  width: 10px;
+  height: 14px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  background: var(--ds-color-neutral-surface-tinted);
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.08);
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .pot {
+    width: 130px;
+    height: 130px;
+  }
+  .tube {
+    grid-template-columns: 24px 60px 1fr auto auto;
+  }
+  .drop {
+    width: 7px;
+  }
+}

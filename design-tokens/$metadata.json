@@ -1,0 +1,28 @@
+{
+  "tokenSetOrder": [
+    "primitives/globals",
+    "primitives/modes/size/small",
+    "primitives/modes/size/medium",
+    "primitives/modes/size/large",
+    "primitives/modes/size/global",
+    "primitives/modes/typography/size/small",
+    "primitives/modes/typography/size/medium",
+    "primitives/modes/typography/size/large",
+    "primitives/modes/typography/primary/lealand",
+    "primitives/modes/typography/secondary/lealand",
+    "primitives/modes/color-scheme/dark/lealand",
+    "primitives/modes/color-scheme/light/lealand",
+    "themes/lealand",
+    "semantic/color/accent",
+    "semantic/color/pink",
+    "semantic/color/sun",
+    "semantic/color/mint",
+    "semantic/color/sky",
+    "semantic/color/neutral",
+    "semantic/color/info",
+    "semantic/color/success",
+    "semantic/color/warning",
+    "semantic/color/danger",
+    "semantic/style"
+  ]
+}
